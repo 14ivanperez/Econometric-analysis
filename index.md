@@ -50,7 +50,7 @@ library(tidyverse)
 library(epiDisplay)
 library(stargazer)
 library(ggplot2)
-library(haven) #for read_data
+library(haven) #to read_data
 ```
 ---
 

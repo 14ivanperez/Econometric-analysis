@@ -1,4 +1,4 @@
-## Financial Risk Management using R
+## Econometrics using R
 
 ### Introduction
 

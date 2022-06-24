@@ -1,4 +1,4 @@
-## Econometrics using R
+## Econometrics using R Markdown
 
 ### Introduction
 

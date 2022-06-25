@@ -2,54 +2,46 @@
 
 ### Introduction
 
-I will show how to calculate the return of a portfolio of securities as well as quantify the market risk of that portfolio. I will use the two main tools for calculating the market risk of stock portfolios: Value-at-Risk (VaR) and Expected Shortfall (ES).
+Discussed the random sampling assumption and the conditional independence assumption (E(u|X) = 0), produced frequency tables and summary statistics tables, run t-tests comparing the difference in variables indicators, made regression lines between dummy variables and a Monte Carlo simulation among others.
 
-### Installation
-
-```` markdown
-#load data
-library(quantmod)    #package needed for data
-wilsh<-getSymbols("DEXUSAL",src="FRED",auto.assign=FALSE) #obtain symbols for data
-wilsh <- na.omit(wilsh) #omit NA values
-wilsh <- wilsh["1979-12-31/2017-12-31"]  #to use specific dates
-````
 
 ### Required libraries
 
-```` markdown
-library(quantmod) 
-library(moments)
-library(MASS)
-library(metRology)
-library(rugarch)
-````
+```markdown
+library(gmodels)
+library(tidyverse)
+library(epiDisplay)
+library(stargazer)
+library(ggplot2)
+library(haven) #to read_data
+```
 
 ### Topics discused
 
 ````markdown
-# TO OBTAIN VAR AND ES FROM ACTUAL DATA
-# VAR AND ES FROM SIMULATIONS:
-1. different distributions (randon, normal, t)
-2. Calculate skewness, kurtosis, and Jarque-Bera test 
-# ESTIMATE VaR and ES at 10-DAY HORIZON
-# ACF AND VOLATILITY CLUSTERING USING GARCH MODELS
+# STATISTICAL THEORY REVIEW
+# LINEAR REGRESSION
+1. with one regressor
+2. with multiple regressors
+# STATISTICAL INFERENCE
+# MONTE CARLO SIMULATION & GRAPHICAL PRESENTATIONS
 ````
 
 
 ### Roadmap
 
 ````markdown
-1.Data source (FRED at the Federal Reserve Bank of St. Louis), and the calculation of returns 
-                                                 ↓
-2.How to calculate value-at-risk (VaR) and expected shortfall (ES) when returns are normally distribute
-                                                 ↓
-3.How to calculate VaR and ES when returns aren't normally distributed (random and t distributed)
-                                                 ↓
-4.Test for the presence of volatility clustering (Jarque-Bera test ), and how to calculate VaR and ES when returns exhibit volatility clustering
+1.Obtain data source and answers to theoretical questions
+                      ↓
+2.Load data set and produce frequency tables
+                      ↓
+3.Regress variables, interpret them and graph them
+                      ↓
+4.Create a Monte Carlo Simulation
 ````
 ___
 
 
 ### References
 
-Financial Risk Management with R, Duke University
+Sources: dataset: “data_giulietti_etal.dta”, that quantifies the extent of racial discrimination in local public services in the U.S
